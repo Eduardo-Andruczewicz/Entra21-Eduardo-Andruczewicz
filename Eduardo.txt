@@ -129,10 +129,26 @@
 
          18-
          let R3 = Number(prompt("Ver raio da circunferência"))
-         let pi = 3.14159
-         let R4 = (4/3) * pi * (R3 * 3)
-         alert("Valor da circunferência: " + R4)
-         console.log(pi + R4)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+         const PI = 3.14159
+         let area = (4 / 3) * PI * raio * 3
+         console.log(area.toFixed(2)) 
+
+         19- 
+         alert("Vamos calcular a área de um triangulo")   
+         let base = Number(prompt("Digite a base"))    
+         let altura =
+
+
+         20-
+         let preco = Number(prompt("Qual e o preco do produto))
+         let percentualDesconto = Number(prompt("Qual e o percentual desconto"))
+         let desconto = percentualDesconto / 100 * preco
+         let total = preco - desconto
+         console.log(`Total: ${total} \ndesconto ${desconto}`)
+
+         21-
+         
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 
 
 
