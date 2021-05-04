@@ -1,0 +1,70 @@
+1-
+ Qual é a saída dos seguintes comandos
+console.log(!10) // false
+console.log(!!"String") // true
+console.log(!!2.3) // true
+console.log(Boolean(null)) // false
+
+2) Qual é a saída das seguintes instruções
+console.log(10 > 2) // true
+console.log(5 >= "5") // true
+console.log(5 >== "5") // false
+console.log("apple" > "pineapple") false
+console.log("2" > "12") false
+console.log(undefined == null) true
+console.log(undefined === null) false
+console.log(null == "\n0\n") 
+console.log(null === +"\n0\n") 
+
+3) Escreva um script que receba uma valor A, verifique se o valor A é maior que 10 e
+mostre na tela "O valor A é maior que 10". 
+Entrada:            Saída:
+11                  O valor A é maior que 10
+                    Programa finalizado...
+ 
+9                   Programa finalizado...    
+Resposta:
+
+let valorA = 11
+    if (valorA > 10) {
+         console.log("o valor é maior que 10")
+    } else {
+        console.log("O valor é menor que 10")
+    }
+
+    let valorB = 9
+      if (valorB > 10) {
+          console.log("O valor e maior que 10")
+        } else {
+            console.log("O valor é maior que 10")
+        }
+
+4) Escreva um script que receba um número, se esse número for par mostre na tela
+a metade do número digitado. No final do script mostrar na tela "Programa finalizado..."
+Entrada:         Saída:
+10               5
+                 Programa finalizado...
+
+9                Programa finalizado...
+Resposta:
+
+let numero = Number(prompt("Digite um número"))
+    if (numero % 2 === 0) {
+        console.log(numero / 2)
+
+5) Escreva um script que receba um número, se esse número for par mostre na tela
+"O número é par" senão mostre "O número é ímpar".
+Entrada:         Saída:
+10               O número é par
+
+9                O número é ímpar
+Resposta:
+
+let numero = Number(prompt("Digite um numero"))
+let valorC = 10
+
+    console.log("ValorC é o numero par")
+
+    let valorD = 9
+
+    console.log(" ValorD é o numero ímpar")
