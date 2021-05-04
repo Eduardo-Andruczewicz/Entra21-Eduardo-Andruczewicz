@@ -1,0 +1,144 @@
+        1- 
+        console.log("Oi,meu nome é Eduardo")
+        2-
+        console.log(`Cadastrar\n Listar funcionários\n Editar funcionários\n Deletar funcionários\n Sair`)
+
+        3-
+        let nome = "Eduardo"
+        let admin = nome
+        let idade = 21
+        let peso = 75
+        let altura = 1.86
+        let telefone = "999652483"
+
+         console.log(nome)
+         console.log(idade)
+         console.log(peso)
+         console.log(altura)
+         console.log(telefone)
+
+         4-
+         let titulo = "Seja Foda" 
+         let edição = 1
+         let autor = "Caio Carneiro" 
+         let datapublicação = 2017
+
+         console.log(titulo)
+         console.log(edição)
+         console.log(autor)
+         console.log(datapublicação)
+
+         5-
+         let datadenascimento = 22101999
+         let filhos = 0
+         let navegador = 1 
+
+         6-
+         let nome1 = "João"
+         console.log(`Olá ${1}`) // ?
+         console.log(`Olá ${"nome"}`) // ?
+         alert(`Olá ${nome1}`) // ?
+
+         7-
+         let x = 10
+         let y = 8
+         let area = (10 * 8) / 2 + 3 ** 4
+         console.log(area)
+
+         9-
+         let a = 2
+         let x1 = 1 + (a *= 2)
+         console.log(a, x1)
+
+         10-
+         A) "" + 1 + 0 // = 10
+         B) "" - 1 + 0 // = -1
+         C) 6 / "3" // = 2
+         D) "2" * "3" // = 6
+         E) 4 + 5 + "px" // = 9px
+         F) "$" + 4 + 5 // = 45$
+         G) "4" - 2 // = 2
+
+         11-
+         let altura = 9
+         console.log("altura:",altura, "m")
+
+         let largura = 5
+         console.log("largura:", largura, "m")
+
+         let perimetro = altura + altura + largura + largura
+         console.log("perimetro", perimetro, "m")
+
+         let area = altura * largura
+         console.log("area" * area * "m²")
+
+         12-
+         let valor1 = Number (prompt ("valor1"))
+         console.log (valor1)
+
+         let valor2 = Number (prompt ("valor2"))
+         console.log (valor2)
+         console.log (valor2 + valor1)
+
+         13-
+         let valor = 2
+
+         let valor3 = Number (prompt ("Valor 3"))
+         console.log (valor3)
+
+         let valor4 = Number (prompt ("valor 4"))
+         console.log (valor4)
+
+         let soma = valor3 + valor4 
+         console.log(soma)
+         console.log(soma/valor)
+
+         14-
+         let valorr = 2
+
+         let valor5 = Number (prompt ("Valor 5"))
+         console.log (valor5 ** valorr)
+
+         let valor6 = Number (prompt ("Valor 6"))
+         console.log (valor6 ** valorr)
+
+         let valor7 = Number (prompt("Valor 7"))
+         console.log (valor7 ** valorr)
+
+         15-
+         let a1 = 10
+         let b = 20
+         let aux = a1 
+         a1 = b 
+         b = aux 
+         console.log(a1, b);
+
+         16-
+         let mes = 12 
+         let dias = 30
+
+         console.log(mes * dias)
+
+         17- 
+         let numero = 10 
+         let sucessor = 1
+         let antecessor = 1 
+
+         console.log(numero - antecessor)
+         console.log(numero + sucessor)
+
+         18-
+         let R3 = Number(prompt("Ver raio da circunferência"))
+         let pi = 3.14159
+         let R4 = (4/3) * pi * (R3 * 3)
+         alert("Valor da circunferência: " + R4)
+         console.log(pi + R4)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+
+
+
+
+
+
+
+         
+          
