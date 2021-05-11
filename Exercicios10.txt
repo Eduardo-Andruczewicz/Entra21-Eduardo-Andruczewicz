@@ -1,0 +1,68 @@
+01)
+    let i = 0
+        while (i < 10) {
+           console.log("Olá mundo")
+           i++
+        }
+
+    let i = 0
+        do {
+            console.log("Olá Mundo")
+            i++
+        } while (i < 10)
+
+        for (let i = 0; i < 10; i++) {
+            console.log("Olá Mundo")
+        }
+
+02) 
+      let i = 0
+        while (i < 11) {
+           console.log(`Executando pela ${i} vez..`)
+           i++
+        }
+
+        let i = 1
+        do {
+            console.log(`Executando pela ${i} vez`)
+            i++
+        } while (i < 11)
+
+         for (let i = 1; i < 11; i++) {
+            console.log(`Executando pela ${i} vez`)
+      }
+
+03) 
+     let i = 10
+    while (i > 0) {
+        console.log(`${i}`)
+        i-- 
+    }
+    console.log("Fim")
+
+
+
+05)
+
+    <script>
+    for (let i = 0; i <= 100000; i+=1000)
+    console.log(i)
+    </script>
+
+
+06)
+
+    <script>   
+    for (let i = 0; i < 5; i++){
+            let valor1 = +prompt("Digite o primeiro valor")
+            let valor2 = +prompt("Digite o segundo valor")
+            let valor3 = +prompt("Digite o terceiro valor")
+            let valor4 = +prompt("Digite o quarto valor")
+            let valor5 = +prompt("Digite o quinto valor")
+            let soma = valor1 + valor2 + valor3 + valor4 + valor5
+            let media = soma/5
+            alert(`A soma dos valores é ${soma} e a média é ${media.toFixed(2)}`)
+            
+            
+        }
+    </script>
