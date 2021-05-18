@@ -1,0 +1,71 @@
+1)
+
+ function ehPositivo(numero) {
+        return numero > 0    
+      }
+      let numero = +prompt("Digite um numero")
+      console.log(ehPositivo(numero))
+      
+2)
+
+let numeroa = +prompt("Digite o primeiro numero")
+        let numerob = +prompt("Digite o segundo numero")
+
+    function menorValorEntreNumeros(numeroa,numerob){
+        if (numeroa > numerob) {
+                return numerob
+        } return numeroa
+    }
+    let menorNumero = menorValorEntreNumeros(numeroa,numerob)
+    console.log(` O menor número é ${menorNumero}`)
+
+3)
+
+let numeroa = +prompt("Digite o primeiro numero")
+let numerob = +prompt("Digite o segundo numero")
+
+    function numerosPotencias(numeroa, numerob) {
+        if(numeroa ** numerob) {
+                return
+        }
+    }
+    console.log(` O resultado é ${numeroa ** numerob}`)
+
+4)
+
+  let nota1 = +prompt("Digite a primeira nota")
+     let nota2 = +prompt("Digite a segunda nota")
+     let nota3 = +prompt("Digite a terceira nota")
+
+     function mediaDasNotas(nota1,nota2,nota3){
+         let media = (nota1 + nota2 + nota3) / 3
+                    return media 
+     } 
+     let media = mediaDasNotas(nota1, nota2, nota3)
+     console.log(` A media das notas é ${media.toFixed(2)}`)
+
+5)
+
+     let media = +prompt("Digite uma média")
+     function conceituarMedias(media){
+       if (media < 5){
+           return "D"
+       } else if (media < 7){
+           return "C"
+       } else if (media < 9){
+           return "B"
+       }   return "A"
+   }
+   let conceito =  conceituarMedias(media)
+   console.log(`O conceito da média é ${conceito}`)
+          
+6)
+
+
+         
+
+
+
+
+
+     
