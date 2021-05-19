@@ -61,6 +61,72 @@ let numerob = +prompt("Digite o segundo numero")
           
 6)
 
+    let altura = prompt("Digite a altura da pessoa")
+        let sexo = prompt("Digite o sexo da pessoa").toUpperCase()
+            function pesoIdeal(altura,sexo){
+                if (sexo == "F"){
+                return (62.1 * altura - 44.7).toFixed(2)
+                } else if (sexo == "M"){
+                    return(72.7 * altura - 58).toFixed(2)
+                } else{
+                    return "Sexo inválido"
+                }
+                
+            }
+            console.log(pesoIdeal(altura,sexo))
+
+ 7)
+
+    let vetor = []
+      let numeroMaior = 0
+      let numeroMenor = 1001 
+      for (let i = 0; i < 50; i++){
+            vetor[i] = (Math.random() * 999 + 1).toFixed(2)
+            if (numeroMaior < vetor[i]){
+                numeroMaior = vetor[i]
+            } else if (numeroMenor > vetor[i]){
+                numeroMenor = vetor[i]
+            }
+      } 
+      console.log(vetor)
+      console.log(` O número maior é ${numeroMaior}`)
+      console.log(` O número menor é ${numeroMenor}`)
+
+8)
+
+
+    function idadeEmDias(anos,meses,dias){
+        return(anos * 365 + meses * 31 + dias)
+    }
+    let anos = +prompt("Digite o ano")
+    let meses = +prompt("Digite o mês")
+    let dias = +prompt("Digite os dias")
+    console.log(idadeEmDias(anos,meses,dias))
+
+9)
+
+let numero = +prompt("Digite um numero")
+        function valorInteiro(numero) {
+            let vetor = []
+            for (let i = 1; i < numero; i++) {
+                if (numero % i == 0)
+                    vetor.push(i)
+                    
+            }
+            return vetor
+        }
+        console.log(valorInteiro(numero))
+        console.log(`${valorInteiro(numero).length} numeros são divisiveis por ${numero}`)
+
+10)
+
+
+
+
+
+
+           
+
 
          
 
