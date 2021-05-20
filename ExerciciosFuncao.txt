@@ -109,6 +109,7 @@ let numero = +prompt("Digite um numero")
         function valorInteiro(numero) {
             let vetor = []
             for (let i = 1; i < numero; i++) {
+                
                 if (numero % i == 0)
                     vetor.push(i)
                     
