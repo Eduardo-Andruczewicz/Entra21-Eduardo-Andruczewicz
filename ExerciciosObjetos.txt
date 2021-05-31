@@ -1,0 +1,31 @@
+1)
+
+function estaVazio(objeto){
+    for (let chave in objeto){
+        return false
+    }   return true
+}
+objeto = {nome: "Eduardo"}
+estaVazio(objeto)
+
+2)
+
+function somaPropriedades(objetos) {
+            let soma = 0
+            for (let chave in objeto) {
+                if (typeof objeto[chave] === "number") {
+                    soma += objeto[chave]
+                }
+            }
+            alert(soma)
+        }
+        let objeto = {
+            p1: 20,
+            p2: "50",
+            p3: 85,
+            p4: "Ola",
+            p5: "Teste",
+            p6: "String"
+            p7: 10 
+        }
+        somaPropriedades(objeto)
