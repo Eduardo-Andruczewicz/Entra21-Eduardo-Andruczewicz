@@ -6,106 +6,141 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site Stellar</title>
     <link rel="stylesheet" href="static/css/Stellar.css">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <img src="static/img/logo.svg" alt="Logo da pagina">
-        <h1>Stellar</h1>
-        <pr>
-            Just another free, fully responsive site template
+    <div class="container">
+        <header class="main-header">
+            <img src="static/img/logo.svg" alt="Logo da pagina">
+            <h1>Stellar</h1>
+            <p>
+                Just another free, fully responsive site template
+                <br>
+                built by <a href="#">@ajlkn</a>for <a href="#">HTML5 UP.</a>
+            </p>
+        </header>
+        <div class="fundo-branco">
+            <nav class="nav">
+                <a href="#Intro" class="Active">Introduction</a>
+                <a href="#First" class="Active">First Select</a>
+                <a href="Second" class>Second Section</a>
+                <a href="#cta">Get Started</a>
+            </nav>
             <br>
-            built by <a href="#">@ajlkn</a> <a href="#">HTML5 UP.</a>
-    </header>
-    </pr>
-    <nav>
-        <a href="#Intro" class="Active">Introduction</a>
-        <a href="#First" class="Active">First Select</a>
-        <a href="Second" class>Second Section</a>
-        <a href="#cta">Get Started</a>
-    </nav>
-    <br>
-    <section>
-        <img src="static/img//pic01.jpg" alt="Imagem de um celular">
-        <br>
-        <h2>Ipsum sed adipiscing</h2>
-        <hr>
-        <h2>Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna adipiscing<br> magna etiam amet
-            veroeros. Lorem ipsum dolor tempus sit cursus. Tempus nisl et nullam<br> lorem ipsum dolor sit amet aliquam.
-        </h2>
-        <br>
-        <a href="generic.html" class="button">Learn More</a>
-    </section>
-    <hr>
-    <section>
-        <h2>Magna veroeros</h2>
-        <hr>
-        <h2>Ipsum consequat<br>Sed lorem amet<br> ipsum dolor et amet nullam consequat a feugiat<br> consequat tempus
-            veroeros sed<br> consequat.</h2>
-        <h2>Amed sed feugiat<br>Sed lorem amet ipsum dolor et amet<br> nullam consequat a feugiat<br> consequat tempus
-            veroeros sed<br> consequat.</h2>
-        <h2>Dolor Nullan<br>Sed lorem amet ipsum dolor et amet<br> nullam consequat a feugiat<br> consequat tempus
-            veroeros
-            sed<br> consequat.</h2>
-        <br>
-        <a href="generic.html" class="button">Learn More</a>
-    </section>
-    <hr>
-    <section>
-        <h2>Ipsum consequat</h2>
-        <hr>
-        <h2>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br>posuere. Nulla massa urna, fermentum eget
-            quam aliquet.</h2>
-        <br>
-        <h2>Nam elementum nisl et mi a commodo porttitor. Morbi sit<br> amet nisl eu arcu faucibus hendrerit vel a
-            risus.
-            Nam a orci<br> mi, elementum ac arcu sit amet, fermentum pellentesque<br> et purus. Integer maximus varius
-            lorem, sed convallis diam<br> accumsan sed. Etiam porttitor placerat sapien, sed eleifend<br> a enim
-            pulvinar
-            faucibus semper quis ut arcu. Ut non nisl a<br>mollis est efficitur vestibulum. Integer eget purus nec
-            nulla<br>
-            mattis et accumsan ut magna libero. Morbi auctor iaculis<br> porttitor. Sed ut magna ac risus et hendrerit
-            scelerisque.<br> Praesent eleifend lacus in lectus aliquam porta. Cras eu<br> ornare dui curabitur lacinia.
-        </h2>
-        <br>
-        <a href="generic.html" class="button">Learn More</a>
-    </section>
-    <hr>
-    <section>
-        <h2>Congue imperdiet</h2>
-        <br>
-        <h2>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br>posuere. Nulla massa urna, fermentum eget
-            quam aliquet</h2>
-        <a href="generic.html" class="button primary">Get started</a>
-        <a href="generic.html" class="button">Learn More</a>
-    </section>
-    <br>
-    <section>
-        <h2>Aliquam sed mauris</h2>
-        <br>
-        <h2>Sed lorem ipsum dolor sit amet et nullam consequat<br> feugiat consequat magna adipiscing tempus etiam
-            dolore<br> veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra<br> sollicitudin, ligula erat
-            egestas velit, vitae tincidunt odio.</h2>
-        <br>
-        <a href="generic.html" class="button">Learn More</a>
-    </section>
-    <br>
-    <address>
-        <h2>Etiam feugiat</h2>
-        <br>
-        <h2>Address
-            1234 Somewhere Road • Nashville, TN 00000 • USA</h2>
-        <br>
-        <h2>Phone
-            (000) 000-0000 x 0000</h2>
-        <br>
-        <h2>Email
-            information@untitled.tld</h2>
-    </address>
-    <br>
-    <h2>© Untitled. Design: HTML5 UP. Demo Images: Unsplash.</h2>
+            <div class="ajuste-letra">
+                <section class="text1">
+                    <span class="border">
+                        <img class="img" src="static/img//pic01.jpg" alt="Imagem de um celular">
+                    </span>
+                    <br>
+                    <div>
+                        <h2 class="titulo1">Ipsum sed adipiscing</h2>
+                    </div>
 
+                    <h2>Sed lorem ipsum dolor sit amet nullam consequat feugiat<br> consequat magna adipiscing magna
+                        etiam
+                        amet
+                        veroeros. Lorem<br> ipsum dolor tempus sit cursus. Tempus nisl et nullam<br> lorem ipsum dolor sit
+                        amet
+                        aliquam.
+                    </h2>
+                    <br>
+                    <a href="generic.html" class="button">Learn More</a>
+                </section>
+                <hr>
+                <section>
+                    <h2>Magna veroeros</h2>
+                    <hr>
+                    <h2>Ipsum consequat<br>Sed lorem amet<br> ipsum dolor et amet nullam consequat a feugiat<br>
+                        consequat
+                        tempus
+                        veroeros sed<br> consequat.</h2>
+                    <h2>Amed sed feugiat<br>Sed lorem amet ipsum dolor et amet<br> nullam consequat a feugiat<br>
+                        consequat
+                        tempus
+                        veroeros sed<br> consequat.</h2>
+                    <h2>Dolor Nullan<br>Sed lorem amet ipsum dolor et amet<br> nullam consequat a feugiat<br> consequat
+                        tempus
+                        veroeros
+                        sed<br> consequat.</h2>
+                    <br>
+                    <a href="generic.html" class="button">Learn More</a>
+                </section>
+
+                <hr>
+                <section>
+                    <h2>Ipsum consequat</h2>
+                    <hr>
+                    <h2>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br>posuere. Nulla massa urna,
+                        fermentum
+                        eget
+                        quam aliquet.</h2>
+                    <br>
+                    <h2>Nam elementum nisl et mi a commodo porttitor. Morbi sit<br> amet nisl eu arcu faucibus hendrerit
+                        vel
+                        a
+                        risus.
+                        Nam a orci<br> mi, elementum ac arcu sit amet, fermentum pellentesque<br> et purus. Integer
+                        maximus
+                        varius
+                        lorem, sed convallis diam<br> accumsan sed. Etiam porttitor placerat sapien, sed eleifend<br> a
+                        enim
+                        pulvinar
+                        faucibus semper quis ut arcu. Ut non nisl a<br>mollis est efficitur vestibulum. Integer eget
+                        purus
+                        nec
+                        nulla<br>
+                        mattis et accumsan ut magna libero. Morbi auctor iaculis<br> porttitor. Sed ut magna ac risus et
+                        hendrerit
+                        scelerisque.<br> Praesent eleifend lacus in lectus aliquam porta. Cras eu<br> ornare dui
+                        curabitur
+                        lacinia.
+                    </h2>
+                    <br>
+                    <a href="generic.html" class="button">Learn More</a>
+                </section>
+                <hr>
+                <section>
+                    <h2>Congue imperdiet</h2>
+                    <br>
+                    <h2>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br>posuere. Nulla massa urna,
+                        fermentum
+                        eget
+                        quam aliquet</h2>
+                    <a href="generic.html" class="button primary">Get started</a>
+                    <a href="generic.html" class="button">Learn More</a>
+                </section>
+            </div>
+            <br>
+        </div>
+        <section>
+            <h2>Aliquam sed mauris</h2>
+            <br>
+            <h2>Sed lorem ipsum dolor sit amet et nullam consequat<br> feugiat consequat magna adipiscing tempus etiam
+                dolore<br> veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra<br> sollicitudin, ligula erat
+                egestas velit, vitae tincidunt odio.</h2>
+            <br>
+            <a href="generic.html" class="button">Learn More</a>
+        </section>
+        <br>
+        <address>
+            <h2>Etiam feugiat</h2>
+            <br>
+            <h2>Address
+                1234 Somewhere Road • Nashville, TN 00000 • USA</h2>
+            <br>
+            <h2>Phone
+                (000) 000-0000 x 0000</h2>
+            <br>
+            <h2>Email
+                information@untitled.tld</h2>
+        </address>
+        <br>
+        <h2>© Untitled. Design: HTML5 UP. Demo Images: Unsplash.</h2>
+    </div>
 
 
 
