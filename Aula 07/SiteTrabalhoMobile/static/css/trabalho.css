@@ -6,26 +6,29 @@ body {
 
 .titulo-1 {
     padding: 6px 25px;
-    font-size: 19px;
+    font-size: 25px;
     color: #1a1919;
     text-decoration: none;
     border-radius: 100%;
-    background-color: rgb(170, 181, 184);
-
+    background-color: rgb(219, 237, 243);
+    font-family: 'Bebas Neue', cursive;
+    
 }
 
-.paragrafo-1{
-    font-family: 'Staatliches', cursive;
-    color: white;
+.cidade-1{
+    color: white; 
+    text-shadow: black 0.1em 0.1em 0.2em;
+    font-family: 'Bebas Neue', cursive;
 }
+
 
 .button-1{
-    background-color:  rgb(170, 181, 184);
+    background-color: rgb(219, 237, 243);
     font-family: 'Staatliches', cursive;
     color: rgb(31, 30, 30);
     min-width: 100%;
     border-radius: var;
-    
+    font-family: 'Bebas Neue', cursive;
     
 }
 
@@ -40,9 +43,14 @@ body {
     ;
 }
 
-.cidade-1{
+.paragrafo-1{
+    font-family: 'Staatliches', cursive;
     color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    font-family: 'Bebas Neue', cursive;
+
 }
+
 
 .img-2 {
     width: 300px;
@@ -54,8 +62,17 @@ body {
     
 }
 
+.paragrafo-2{
+    font-family: 'Staatliches', cursive;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    font-family: 'Bebas Neue', cursive;
+
+}
+
 .cidade-2{
     color: white;
+    font-family: 'Bebas Neue', cursive;
 }
 
 .img-3 {
@@ -70,6 +87,14 @@ body {
 
 .cidade-3{
     color: white;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.paragrafo-3{
+    font-family: 'Staatliches', cursive;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    font-family: 'Bebas Neue', cursive;
 }
 
 .img-4 {
@@ -84,6 +109,14 @@ body {
 
 .cidade-4{
     color: white;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.paragrafo-4{
+    font-family: 'Staatliches', cursive;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    font-family: 'Bebas Neue', cursive;
 }
 
 .img-5{
@@ -97,4 +130,12 @@ body {
 
 .cidade-5{
     color: white;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.paragrafo-5{
+    font-family: 'Staatliches', cursive;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    font-family: 'Bebas Neue', cursive;
 }
