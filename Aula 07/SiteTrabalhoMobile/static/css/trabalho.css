@@ -1,7 +1,19 @@
 body {
     text-align: center;
     font-family: 'Anton', sans-serif;
-    
+    background-image: url(../img/fundotela.jpg); 
+    background-repeat: no-repeat;   
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.308);
+}
+
+a {
+    text-decoration: none;
 }
 
 .titulo-1 {
@@ -26,10 +38,11 @@ body {
     background-color: rgb(219, 237, 243);
     font-family: 'Staatliches', cursive;
     color: rgb(31, 30, 30);
-    min-width: 100%;
-    border-radius: var;
     font-family: 'Bebas Neue', cursive;
-    
+    display: block;
+    width: max-content;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 
@@ -138,4 +151,12 @@ body {
     color: white;
     text-shadow: black 0.1em 0.1em 0.2em;
     font-family: 'Bebas Neue', cursive;
+}
+
+@media screen and (min-width: 371px) {
+    header {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+    }
 }

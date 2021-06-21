@@ -1,3 +1,10 @@
+body {
+    background-image: url(../img/fundotela.jpg); 
+    background-repeat: no-repeat;   
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 .titulo-1{
     color: white; 
     text-shadow: black 0.1em 0.1em 0.2em;
@@ -50,4 +57,11 @@
     text-shadow: black 0.1em 0.1em 0.2em;
     font-family: 'Bebas Neue', cursive;
     text-align: center;
+}
+@media screen and (min-width: 371px) {
+    header {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+    }
 }
