@@ -1,0 +1,163 @@
+Tamanho elemento
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <style>
+        .campo {
+            position: relative;
+            width: 600px;
+            height: 300px;
+            background-color: green;
+            border: 10px solid black;
+        }
+
+        .bola {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="campo">
+        <div class="bola"></div>
+    </div>
+    <script>
+        let alturaCampo = document.querySelector(".campo").clientHeight
+        let larguraCampo = document.querySelector(".campo").clientWidth
+        let alturaBola = document.querySelector(".bola").clientHeight
+        let larguraBola = document.querySelector(".bola").clientWidth
+        document.querySelector(".bola").style.top = alturaCampo / 2 - alturaBola / 2 + "px"
+        document.querySelector(".bola").style.left = larguraCampo / 2 - larguraBola / 2 + "px"
+    </script>
+</body>
+
+</html>
+
+Evento navegador:
+
+ 1) let botao = document.querySelector("#esconder"),
+            texto = document.querySelector("#text")
+
+        botao.addEventListener("click", () => {
+            texto.hidden = !texto.hidden
+        })
+
+
+ 2)   let campo = document.querySelector(".campo"),
+            bola = document.querySelector(".bola")
+
+        campo.addEventListener("click", (event) => {
+            let coordsCampo = event.currentTarget.getBoundingClientRect();
+                            
+            let coordsBola = {
+                top: event.clientY - coordsCampo.top - campo.clientTop - bola.clientHeight / 2,
+                left: event.clientX - coordsCampo.left - campo.clientLeft - bola.clientWidth / 2
+            };
+
+            // Prevenir passar da borda superior
+            if (coordsBola.top < 0) coordsBola.top = 0;
+
+            // Prevenir passar da borda esquerda
+            if (coordsBola.left < 0) coordsBola.left = 0;
+
+            // Prevenir passar da borda direita
+            if (coordsBola.left + bola.clientWidth > campo.clientWidth) {
+                coordsBola.left = campo.clientWidth - bola.clientWidth;
+            }
+
+            // Prevenir passar da borda inferior
+            if (coordsBola.top + bola.clientHeight > campo.clientHeight) {
+                coordsBola.top = campo.clientHeight - bola.clientHeight;
+            }
+
+            bola.style.left = coordsBola.left + 'px';
+            bola.style.top = coordsBola.top + 'px';
+        })
+
+
+Event delegation
+
+1)    
+
+    let botoes = document.querySelectorAll(".remove-button")
+
+        for (botao of botoes) {
+            botao.addEventListener("click", (e) => {
+                e.target.parentElement.style.display = "none"
+            })
+        }
+
+2)  
+    let lista = document.querySelector("#tree")
+        
+        for (let li of lista.querySelectorAll('li')) {
+          let span = document.createElement('span');
+          li.prepend(span);
+          span.append(span.nextSibling);
+        }
+            
+        lista.addEventListener("click", () => {
+            if (event.target.tagName != 'SPAN') {
+            return;
+          }
+    
+          let childrenContainer = event.target.parentNode.querySelector('ul');
+          if (!childrenContainer) return;
+    
+          childrenContainer.hidden = !childrenContainer.hidden;
+        })
+
+tables.
+
+1)
+
+
+        let trs = document.querySelectorAll("tr")
+        let count = 0
+        for (tr of trs) {
+            let filhos = tr.children
+            filhos[count].style.background = "red"
+            count++
+        }
+
+2)  
+
+     let grid = document.querySelector("#grid")
+        grid.addEventListener("click", (e) => {
+            if (e.target.tagName != 'TH') return
+
+            let th = e.target
+            sortGrid(th.cellIndex, th.dataset.type)
+        })
+
+        function sortGrid(colNum, type) {
+            let tbody = grid.querySelector('tbody')
+            let rowsArray = Array.from(tbody.rows)
+            let compare
+
+            switch (type) {
+                case 'number':
+                    compare = function (rowA, rowB) {
+                        return rowA.cells[colNum].innerHTML - rowB.cells[colNum].innerHTML
+                    }
+                    break
+                case 'string':
+                    compare = function (rowA, rowB) {
+                        return rowA.cells[colNum].innerHTML > rowB.cells[colNum].innerHTML ? 1 : -1
+                    }
+                    break
+            }
+
+            rowsArray.sort(compare)
+
+            tbody.append(...rowsArray)
+        }
+
+
+
