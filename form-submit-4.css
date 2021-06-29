@@ -1,0 +1,46 @@
+.popup {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.144);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup__form {
+    background: rgb(255, 255, 255);
+    width: min-content;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.popup__usercontent {
+    display: flex;
+    justify-content: center;
+
+}
+
+.popup__form__input {
+    margin-bottom: 10px;
+    border-radius: 20px;
+    padding: 8px 20px;
+    border: none;
+    background: rgb(236, 236, 236);
+    outline: none;
+}
+.popup__form__buttons {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.popup__form__buttons__button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background: rgb(230, 230, 230);
+}
+

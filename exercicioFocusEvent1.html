@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content {
+            width: 400px;
+            height: 400px;
+            background: rgb(137, 171, 216);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Crie uma <div> que se torne em uma <textarea> quando clicada.
+        A <textarea> permite editar o HTML da <div>
+        Quando o usuário pressionar Enter ou sair da <textarea>, ela
+        volta a ser uma <div> com o conteúdo alterado na <textarea>/ -->
+    <div class="content">
+
+    </div>
+    <script>
+        let div = document.querySelector("div.content")
+        let textArea = document.createElement("textarea")
+        textArea.classList.add("content")
+        textArea.style.display = "none"
+        div.after(textArea)
+        div.addEventListener("click", (e) => {
+            div.style.display = "none"
+            textArea.style.display = "block"
+            textArea.focus()
+        })
+        textArea.addEventListener("focusout", (e) => {
+            div.style.display = "block"
+            textArea.style.display = "none"
+            div.innerText = textArea.value
+        })
+    </script>
+</body>
+
+</html>
