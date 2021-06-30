@@ -5,60 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        form input + input {
-            margin-top: 5px;
-        }
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-    </style>
 </head>
 
 <body>
-    <!-- Crie um página da web que permita receber um valor inicial
-    de depósito, a quantidade de meses que esse dinheiro ficará
-    depositado e a porcentagem de juros ao ano.
-    Mostre quanto o dinheiro rendeu nesse período.
-
-    Fórmula:
-    resultado = Math.round(inicial * (1 + juros * anos))
-    
-    Onde:
-        inicial - valor inicial.
-        juros - porcentagem de juros. Ex.: 10%.
-        anos - tempo que o valor ficará depositado. -->
-
-    <form>
-        <input type="number" id="valorInicial" name="valorInicial" placeholder="Valor Inicial">
-        <input type="number" id="qMeses" name="qMeses" placeholder="Quantidade de Meses">
-        <input type="number" id="juros" name="juros" placeholder="Juros ao ano" step=".1">
-        <button>Enviar</button>
-    </form>
-    
     <script>
-        let form = document.querySelector("form")
-        form.addEventListener("submit", (e) => {
-            let inicial = document.querySelector("#valorInicial").value
-            let anos = document.querySelector("#qMeses").value / 12
-            let juros = document.querySelector("#juros").value / 100
+// / 6) Escreva a função formataData(data). Ela deve formatar a data
+//        da seguinte maneira:
 
-            resultado = Math.round(inicial * (1 + juros * anos))
+//        * Se desde a data passou menos de 1 segundo -> "agora"
+//        * Se desde a data passou menos de 1 minuto -> "n segundos atrás" onde n é a quantidade de segundos
+//        * Se desde a data passou menos de 1 hora -> "m minutos atrás" onde m é a quantidade de minutos
+//        * Nos outros casos a data deve ser apresentada no seguinte formato: "DD.MM.YY HH:mm" 
+//          Ex.: 28.06.21 10:00
 
-            alert("Resultado: " + resultado)
-            e.preventDefault()
-        })
+//          Testes:
+//          formatDate(new Date(new Date - 1)) // agora
+//          formatDate(new Date(new Date - 30 * 1000)) // 30 segundos atras
+//          formatDate(new Date(new Date - 5 * 60 * 1000)) // 5 minutos atrás
+//        */
 
+         console.log(formataData(new Date(new Date - 1))); // agora
+         console.log(formataData(new Date(new Date - 30 * 1000))) // 30 segundos atras
+         console.log(formataData(new Date(new Date - 5 * 60 * 1000))) // 5 minutos atrás
+         console.log(formataData(new Date(1960, 6, 30, 15, 30)))
+
+        function formataData(data){
+            let agora = new Date()
+            let diferenca = (agora - data);
+            console.log(diferenca);
+            if (diferenca < 1000) {
+                return ("agora")
+            }
+            if (diferenca < 1000 * 60) {
+                return (diferenca / 1000 + " segundos atrás")
+            }
+            if (diferenca < 1000 * 60 * 60) {
+                return (diferenca / 1000 / 60 + " minutos atrás")
+            }
+                return `${data.getDate()}.${data.getMonth()}.${(data.getFullYear() + "").substring(2, 4)} ${data.getHours()}:${data.getMinutes()}`
+        }
         
+
     </script>
+
 </body>
 
 </html>
