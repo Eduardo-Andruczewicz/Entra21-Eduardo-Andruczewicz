@@ -9,43 +9,14 @@
 
 <body>
     <script>
-// / 6) Escreva a função formataData(data). Ela deve formatar a data
-//        da seguinte maneira:
-
-//        * Se desde a data passou menos de 1 segundo -> "agora"
-//        * Se desde a data passou menos de 1 minuto -> "n segundos atrás" onde n é a quantidade de segundos
-//        * Se desde a data passou menos de 1 hora -> "m minutos atrás" onde m é a quantidade de minutos
-//        * Nos outros casos a data deve ser apresentada no seguinte formato: "DD.MM.YY HH:mm" 
-//          Ex.: 28.06.21 10:00
-
-//          Testes:
-//          formatDate(new Date(new Date - 1)) // agora
-//          formatDate(new Date(new Date - 30 * 1000)) // 30 segundos atras
-//          formatDate(new Date(new Date - 5 * 60 * 1000)) // 5 minutos atrás
-//        */
-
-         console.log(formataData(new Date(new Date - 1))); // agora
-         console.log(formataData(new Date(new Date - 30 * 1000))) // 30 segundos atras
-         console.log(formataData(new Date(new Date - 5 * 60 * 1000))) // 5 minutos atrás
-         console.log(formataData(new Date(1960, 6, 30, 15, 30)))
-
-        function formataData(data){
-            let agora = new Date()
-            let diferenca = (agora - data);
-            console.log(diferenca);
-            if (diferenca < 1000) {
-                return ("agora")
-            }
-            if (diferenca < 1000 * 60) {
-                return (diferenca / 1000 + " segundos atrás")
-            }
-            if (diferenca < 1000 * 60 * 60) {
-                return (diferenca / 1000 / 60 + " minutos atrás")
-            }
-                return `${data.getDate()}.${data.getMonth()}.${(data.getFullYear() + "").substring(2, 4)} ${data.getHours()}:${data.getMinutes()}`
+   function imprimeNumeros(comeco, fim){
+            console.log(comeco)
+            comeco++
+            if (comeco <= fim)
+                setTimeout(() => imprimeNumeros(comeco, fim), 1000)
         }
-        
 
+        console.log(imprimeNumeros(1, 5))
     </script>
 
 </body>
