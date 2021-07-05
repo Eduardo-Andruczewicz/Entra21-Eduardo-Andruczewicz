@@ -1,15 +1,36 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+Sintaxe-classes
+1)
+class Aluno {
+           constructor(matricula, nome, notaProva1, notaProva2, notaTrabalho){
+               this.matricula = matricula
+               this.nome = nome
+               this.notaProva1 = notaProva1
+               this.notaProva2 = notaProva2
+               this.notaTrabalho = notaTrabalho
+           }  
+              calcularMedia(){
+                  return((this.notaProva1*3) + (this.notaProva2*3) + (this.notaTrabalho*2))/8
+              }
+              notaFaltando(){
+                  let media = this.calcularMedia()
+                  if (media < 6 ){
+                    console.log(`${this.nome} precisa tirar ${6 - media} na prova final`)
+                  }
+                  else {
+                      console.log(`${this.nome} = 0`)
+                  }
+              }
+                  
+            }
+            let aluno1 = new Aluno("01", "Eduardo", 9, 5, 8),
+                aluno2 = new Aluno("02", "Patty", 5, 6, 3)
+                console.log(aluno1.calcularMedia())
+                aluno1.notaFaltando()
+                console.log(aluno2.calcularMedia())
+                aluno2.notaFaltando()
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <script>
-        class Pessoa {
+2) 
+class Pessoa {
             constructor(nome, telefone) {
                 this.nome = nome
                 this.telefone = telefone
@@ -80,8 +101,3 @@
         console.log(agenda)        
         agenda.imprimePessoa(7)
         agenda.buscaPessoa("João")        
-    </script>
-
-</body>
-
-</html>
