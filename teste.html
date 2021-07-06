@@ -9,77 +9,56 @@
 
 <body>
     <script>
-        class Pessoa {
-            constructor(nome, telefone) {
-                this.nome = nome
-                this.telefone = telefone
-            }
-        }
+//          2) Dado os seguintes objetos:
 
-        class Agenda {
-            constructor() {
-                this.listaPessoas = []
-            }
+// let cabeca = {
+//     oculos: 1
+// }
 
-            armazenaPessoa(nome, telefone) {
-                // Checar se a lista tem espaço disponível
-                if (this.listaPessoas.length < 10) {
-                    this.listaPessoas.push(new Pessoa(nome, telefone))
-                } else {
-                    console.log("Agenda está lotada!")
-                }
-            }
+// let mesa = {
+//     caneta: 3
+// }
 
-            imprimeAgenda() {
-                for (let pessoa of this.listaPessoas) {
-                    console.log(`Nome: ${pessoa.nome} | Telefone: ${pessoa.telefone}`)
-                }
-            }
+// let cama = {
+//     lenco: 1,
+//     travesseiro: 2
+// }
 
-            removePessoa(nome) {
-                for (let i = 0, tamanhoVetor = this.listaPessoas.length; i < tamanhoVetor; i++) {
-                    if (this.listaPessoas[i].nome === nome) {
-                        this.listaPessoas.splice(i, 1)
-                        break
-                    }
-                }
-            }
+// let bolso = {
+//     dinheiro: 200
+// }
 
-            imprimePessoa(indice) {
-                // Verificar se o indice é válido
-                if (indice < 0 && indice > 9) {
-                    console.log("Indice Inválido!")
-                } else {
-                    console.log(`Nome: ${this.listaPessoas[indice].nome} | Telefone: ${this.listaPessoas[indice].telefone}`)
-                }
-            }
+// - Use __proto__ para atribuir prototypes na seguinte ordem: bolso -> cama -> mesa -> cabeca.
+// Testes:
+// console.log(bolso.caneta) // 3
+// console.log(cama.oculos) // 1
+// console.log(mesa.dinheiro) // undefined
 
-            buscaPessoa(nome) {
-                for (let pessoa of this.listaPessoas) {
-                    if (pessoa.nome === nome) {
-                        console.log(`Telefone: ${pessoa.telefone}`)
-                        return
-                    }
-                }
-                console.log("Nome não cadastrado!")
-            }
-        }
+let cabeca = {
+    oculos: 1
+}
 
-        let agenda = new Agenda()
-        agenda.armazenaPessoa("João", "(47) 9 9999-9991")
-        agenda.armazenaPessoa("João", "(47) 9 9999-9992")
-        agenda.armazenaPessoa("João", "(47) 9 9999-9993")
-        agenda.armazenaPessoa("Maria", "(47) 9 9999-9994")
-        agenda.armazenaPessoa("João", "(47) 9 9999-9995")
-        agenda.armazenaPessoa("João", "(47) 9 9999-9996")
-        agenda.armazenaPessoa("João", "(47) 9 9999-9997")
-        agenda.armazenaPessoa("João", "(47) 9 9999-9998")
-        agenda.armazenaPessoa("João", "(47) 9 9999-9999")
-        agenda.armazenaPessoa("João", "(47) 9 9999-9910")                              
-        agenda.removePessoa("João")
-        console.log(agenda)        
-        agenda.imprimePessoa(7)
-        agenda.buscaPessoa("João")        
+let mesa = {
+    caneta: 3
+}
+
+let cama = {
+    lenco: 1,
+    travesseiro: 2
+}
+
+let bolso = {
+    dinheiro: 200
+}
+
+    bolso.__proto__ = cama
+    cama.__proto__ = mesa
+    mesa.__proto__ = cabeca
+    console.log(bolso.caneta)
+    console.log(cama.oculos)
+    console.log(mesa.dinheiro)
+
+    
     </script>
 
 </body>
