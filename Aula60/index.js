@@ -1,11 +1,4 @@
-const { Pool } = require("pg");
-
-const pool = new Pool({
-    host: "localhost",
-    user: "postgres",
-    password: "991120661Edu.",
-    database: "Node"
-});
+const db = require("./db");
 
 (async () => {
     //     try {
@@ -41,37 +34,46 @@ const pool = new Pool({
     // } finally {
     //     pool.end();
     // }
-    try {
-        const res = await pool.query(`
-        INSERT INTO
-            funcionarios (nome, email, telefone)
-        VALUES
-            ($1, $2, $3)
-        RETURNING *;`,
-            ["pedro", "pedro@email.com", "(47) 9 9999-9999"]);
-        console.log(res.rows[0]);
-    } catch (error) {
-        console.log(error.message);
-    } finally {
-        pool.end();
-    }
+//     try {
+//         const res = await pool.query(`
+//         INSERT INTO
+//             funcionarios (nome, email, telefone)
+//         VALUES
+//             ($1, $2, $3)
+//         RETURNING *;`,
+//             ["pedro", "pedro@email.com", "(47) 9 9999-9999"]);
+//         console.log(res.rows[0]);
+//     } catch (error) {
+//         console.log(error.message);
+//     } finally {
+//         pool.end();
+//     }
    
 
- try {
-const funcionarios = [
-["joão", "joão@email.com", "(47) 9 8888-8888"],
-["maria", "maria@email.com", "(47) 9 7777-7777"]
-];
+//  try {
+// const funcionarios = [
+// ["joão", "joão@email.com", "(47) 9 8888-8888"],
+// ["maria", "maria@email.com", "(47) 9 7777-7777"]
+// ];
 
- const query = format("INSERT INTO funcionarios (nome, email, telefone) VALUES %L RETURNING *", funcionarios);
+//  const query = format("INSERT INTO funcionarios (nome, email, telefone) VALUES %L RETURNING *", funcionarios);
 
- const res = await pool.query(query);
+//  const res = await pool.query(query);
 
- console.log(res.rows);
+//  console.log(res.rows);
+// } catch (error) {
+// console.log(error.message);
+// } finally {
+// pool.end();
+// }
+
+try {
+    const {rows} = await db.query("SELECT NOW()");
+    console.log(rows);
 } catch (error) {
-console.log(error.message);
+    console.log(error.message);
 } finally {
-pool.end();
+    db.end();
 }
 })();
 
