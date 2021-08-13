@@ -6,10 +6,18 @@ const query = `
         nome text NOT NULL,
         email text NOT NULL UNIQUE,
         telefone text NOT NULL UNIQUE,
-        numero_doc text NOT NULL UNIQUE,
+        numero_doc numeric NOT NULL UNIQUE,
         tipo_pessoas integer NOT NULL,
-        pontos text NOT NULL
+        pontos integer DEFAULT 0
     );
+
+    CREATE TABLE IF NOT EXISTS editora (
+        id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+        nome_gerente text NOT NULL,
+        telefone text NOT NULL 
+    );
+
+
 
     CREATE TABLE IF NOT EXISTS enderecos (
         id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -32,14 +40,15 @@ const query = `
     );
 
     CREATE TABLE IF NOT EXISTS compras (
-        id uuid PRIMARY KEY DEFAULT gen_randow_uuid(),
-        id_cliente 
-        
-    )
-`;
-
-      
-
+        id_cliente uuid,
+        id_livro uuid,
+        data timestamp NOT NULL,
+        valor numeric NOT NULL,
+        PRIMARY KEY (id_cliente,id_livro,data),
+        FOREIGN KEY (id_cliente) REFERENCES clientes (id),
+        FOREIGN KEY (id_livro) REFERENCES livros (isbn)
+    );
+   );`
 (async () => {
     try {
         await db.query(query);
