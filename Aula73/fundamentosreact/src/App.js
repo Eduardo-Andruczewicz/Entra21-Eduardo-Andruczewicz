@@ -6,6 +6,8 @@ import { Familia } from './components/Familia';
 import { MembroFamilia } from './components/MembroFamilia';
 import { Card } from './components/Card';
 import { ParOuImpar } from './components/ParOuImpar';
+import { ValorAleatorio } from './components/ValorAleatorio';
+import { ComponenteControlado } from './components/ComponentesControlados';
 
 
 function App() {
@@ -30,11 +32,25 @@ function App() {
             <MembroFamilia nome="Josué" />
           </Familia>
         </Card>
-        <Card>
+        <Card titulo="Renderização condicional">
           <ParOuImpar numero={10} />
           <ParOuImpar numero={5} />
           <hr />        
-          <Notificacao />
+          <Notificacao mensagens={["Oi"]}/>
+        </Card>
+        <Card titulo="Manipulando eventos">
+          <ManipulandoEventos />
+        </Card>
+        <Card titulo="State">
+          <Relogio />
+          <hr />
+          <ValorAleatorio max={100} />
+        </Card>
+        <Card titulo="Componente controlado">
+          <ComponenteControlado />
+        </Card>
+        <Card titulo="State Assíncrono">
+          <Contador />
         </Card>
       </div>
     </div>
